@@ -1,9 +1,10 @@
 import { Button as MuiButton } from '@mui/material';
 import React from 'react'
 
-const Button = ({ variant, onClick, label }) => {
+// eslint-disable-next-line react/prop-types
+const Button = ({ variant, onClick, label, disable }) => {
    return (
-      <MuiButton variant={variant} onClick={onClick}>{label}</MuiButton>
+      <MuiButton disabled={disable} variant={variant} onClick={onClick}>{label}</MuiButton>
    )
 }
 

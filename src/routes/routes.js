@@ -8,14 +8,14 @@ import {
 
 // import Private Routes
 import {
-
+   home
 } from './react-app-routes/private-routes/private-routes';
 
 // import Component which do not need lazy load;
 import Login from '../pages/log-in/Login';
 import SignUp from '../pages/sign-up/SignUp';
+import Home from '../pages/home/Home';
 
-console.log('Login', login)
 // import Component which need lazy load;
 
 
@@ -30,6 +30,10 @@ export const PublicRoutes = [
    {
       path: signup,
       element: <SignUp />
+   },
+   {
+      path: home,
+      element: <Home />
    }
 ];
 
