@@ -7,6 +7,7 @@ import { ThemeProvider } from '@mui/material';
 import { PrivateRoute, PublicRoutes } from './routes/routes';
 import NotFound from './pages/not-found/NotFound';
 import { theme } from './theme/theme';
+import ProtectedRoutes from './routes/protected-route/ProtectedRoutes';
 
 function App() {
 
@@ -22,11 +23,13 @@ function App() {
 								<Route key={index} path={route.path} element={route.element} />
 							))
 						}
-						{
-							PrivateRoute.map((route, index) => (
-								<Route key={index} path={route.path} element={route.element} />
-							))
-						}
+						<Route element={<ProtectedRoutes />}>
+							{
+								PrivateRoute.map((route, index) => (
+									<Route key={index} path={route.path} element={route.element} />
+								))
+							}
+						</Route>
 						<Route path='*' element={<NotFound />} />
 					</Routes>
 				</ThemeProvider>

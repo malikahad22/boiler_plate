@@ -13,7 +13,7 @@ const InputField = ({ label, type, fullwidth, width, onChange, value, name, help
          helperText={helperText}
          onBlur={onBlur}
          name={name}
-         error={helperText && helperText === '' && helperText}
+         // error={helperText && helperText === '' && helperText}
 
       />
    )

@@ -10,7 +10,6 @@ axiosInstance.interceptors.request.use(
       if (token) {
          config.headers.Authorization = `Bearer ${token}`;
       }
-
       config.headers['Content-Type'] = 'application/json';
       config.headers['ngrok-skip-browser-warning'] = 'true';
 
@@ -24,7 +23,6 @@ axiosInstance.interceptors.request.use(
 
 axiosInstance.interceptors.response.use(
    (response) => {
-      console.log('response in interceptor', response)
       return response;
    },
    (error) => {

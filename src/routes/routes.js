@@ -30,14 +30,15 @@ export const PublicRoutes = [
    {
       path: signup,
       element: <SignUp />
-   },
+   }
+];
+
+export const PrivateRoute = [
    {
       path: home,
       element: <Home />
    }
 ];
-
-export const PrivateRoute = [];
 
 
 
